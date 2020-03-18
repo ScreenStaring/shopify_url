@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ShopifyURL::VERSION
   spec.authors       = ["Skye Shaw"]
   spec.email         = ["skye.shaw@gmail.com"]
-  spec.summary       = %q{Build URLs to Shopify web pages}
-  spec.description   = %q{Shopify URL allows you to build URLs to Shopify stores and the Admin panel}
+  spec.summary       = %q{Build URLs for Shopify websites}
+  spec.description   = %q{Shopify URL allows you to build URLs to Shopify stores and the Admin site that can be used as links}
   spec.homepage      = "https://github.com/ScreenStaring/shopify_url"
   spec.license       = "MIT"
 

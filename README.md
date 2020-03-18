@@ -38,7 +38,7 @@ See the RDocs for a complete list of methods.
 ```rb
 require "shopify_url"
 
-url = ShopifyURL::Store.new("shopname")  # you can also use your top-level domain
+url = ShopifyURL::Store.new("shopname")  # can also be the site's top-level domain
 
 # https://shopname.myshopify.com/collections
 url.collections
@@ -54,7 +54,7 @@ See the RDocs for a complete list of methods.
 All Shopify URL generation methods accept a `Hash` of query string parameters:
 
 ```rb
-url = ShopifyURL::Store.new("shopname")  # you can also use your top-level domain
+url = ShopifyURL::Store.new("shopname")  # can also be the site's top-level domain
 
 # https://shopname.myshopify.com/products/some-handle?tracking=data
 url.products("some-handle", :tracking => "data")
