@@ -147,7 +147,7 @@ module ShopifyURL
       end
     end
 
-    class Orders < String
+   class Orders < String
       def initialize(host, qs = nil)
         super host + "/orders"
         self << "?" << qs if qs
@@ -159,6 +159,18 @@ module ShopifyURL
         url = self + "/new"
         url << "?" << URI.encode_www_form(params.to_a) if params && params.any?
         url
+      end
+    end
+
+    class Theme < String
+      def initialize(base, id, qs = nil)
+        super base + "/themes/" << id.to_s
+        self << "?" << qs if qs
+      end
+
+      # Not the code editor, the theme customization page
+      def editor
+        self + "/editor"
       end
     end
 
@@ -229,6 +241,15 @@ module ShopifyURL
 
     def products(query = nil)
       Products.new(host, q(query))
+    end
+
+    def themes
+      host + "/themes"
+    end
+
+    def theme(id, query = nil)
+      id_required!(id)
+      Theme.new(host, id, q(query))
     end
   end
 end

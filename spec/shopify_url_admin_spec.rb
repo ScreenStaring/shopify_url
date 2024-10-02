@@ -107,4 +107,20 @@ RSpec.describe ShopifyURL::Admin do
       end
     end
   end
+
+  describe "#themes" do
+    it "builds a URL to all themes" do
+      expect(@admin.themes).to eq test_url("themes")
+    end
+  end
+
+  describe "#theme" do
+    it "builds a URL to the given theme" do
+      expect(@admin.theme(1)).to eq test_url("themes/1")
+    end
+
+    it "builds a URL to the given theme's editor" do
+      expect(@admin.theme(1).editor).to eq test_url("themes/1/editor")
+    end
+  end
 end
