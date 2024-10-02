@@ -2,7 +2,7 @@
 require "uri"
 
 module ShopifyURL
-  VERSION = "0.0.1"
+  VERSION = "0.0.2"
   TOP_LEVEL_DOMAIN = ".myshopify.com"
 
   class Linker
