@@ -1,7 +1,5 @@
 # Shopify URL
 
-[![Build Status](https://travis-ci.org/ScreenStaring/shopify_url.svg?branch=master)](https://travis-ci.org/ScreenStaring/shopify_url)
-
 Build URLs to Shopify web pages.
 
 ## Usage
